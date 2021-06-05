@@ -1,0 +1,89 @@
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.br-sp {
+  display: none;
+  @include mq() {
+    display: block;
+  }
+}
+
+.top {
+  position: relative;
+
+  background-image: url(../img/home-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+
+  &::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.7);
+    /* 自由に位置指定 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+  }
+
+  .top-text {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 200%;
+
+    @include mq(sm) {
+      font-size: 24px;
+    }
+  }
+}
+
+.service {
+  text-align: center;
+  padding: 20px 0;
+
+  &-item + &-item {
+    margin-left: 10px;
+
+    @include mq() {
+      margin-left: 0;
+      margin-top: 16px;
+    }
+  }
+
+  &-item {
+    max-width: 345px;
+
+    @include mq(sm) {
+      max-width: 300px;
+    }
+
+    &_title {
+      margin: 24px 0 !important;
+    }
+
+    &_text {
+      text-align: left;
+    }
+  }
+}
