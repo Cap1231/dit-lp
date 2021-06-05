@@ -1,0 +1,22 @@
+.navbar {
+  background-color: #fff;
+  color: #252525;
+
+  &-brand {
+    margin-right: auto;
+  }
+
+  .nav-item {
+    > * + * {
+      margin-left: 24px;
+    }
+  }
+  .nav-link {
+    text-decoration: none;
+    color: #252525;
+    font-size: 18px;
+  }
+}
+.sidebar {
+  width: 45vw;
+}
