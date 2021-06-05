@@ -21,7 +21,7 @@ $breakpoints: (
 .top {
   position: relative;
 
-  background-image: url(../img/home-bg.jpg);
+  background-image: url(../img/home-bg-01.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +31,6 @@ $breakpoints: (
   &::before{
     /* 透過した黒を上から重ねるイメージ */
     background-color: rgba(0,0,0,0.7);
-    /* 自由に位置指定 */
     position: absolute;
     top: 0;
     right: 0;
@@ -60,7 +59,7 @@ $breakpoints: (
 
 .service {
   text-align: center;
-  padding: 20px 0;
+  padding: 32px 0;
 
   &-item + &-item {
     margin-left: 10px;
@@ -85,5 +84,27 @@ $breakpoints: (
     &_text {
       text-align: left;
     }
+  }
+}
+
+.accomplishment {
+  position: relative;
+
+  background-image: url(../img/home-bg-02.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+
+  &::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
   }
 }

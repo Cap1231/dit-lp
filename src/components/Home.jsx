@@ -63,6 +63,10 @@ const Home = () => {
           </ServiceItem>
         </Box>
       </Container>
+
+      <div className="accomplishment">
+        
+      </div>
     </>
   )
 }
