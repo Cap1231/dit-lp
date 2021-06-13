@@ -9,7 +9,21 @@ import CodeIcon from '@material-ui/icons/Code'
 import AllInclusiveIcon from '@material-ui/icons/AllInclusive'
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+const useStyles = makeStyles((theme) => ({
+  // root: {
+  //   // width: '100%',
+  // },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+}));
 
 const ServiceItem = ({title, children, icon}) => {
   return (
@@ -29,6 +43,7 @@ const ServiceItem = ({title, children, icon}) => {
 
 const Home = () => {
   const isPC = useMediaQuery('(min-width:768px)')
+  const classes = useStyles()
 
   return (
     <>
@@ -65,7 +80,67 @@ const Home = () => {
       </Container>
 
       <div className="accomplishment">
-        
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems={isPC ? "" : "center"}
+          flexDirection={isPC ? "row" : "column"}
+          className="accomplishment-list"
+        >
+          <div className="accomplishment-item">
+            <p className="accomplishment-item-number">10</p>
+            <p className="accomplishment-item-word">年以上の開発・保守経験</p>
+          </div>
+          <div className="accomplishment-item">
+            <p className="accomplishment-item-number">10</p>
+            <p className="accomplishment-item-word">年以上の取引継続年数</p>
+          </div>
+        </Box>
+      </div>
+
+      <div className="faq">
+        <Accordion>
+          <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="faq1-content"
+              id="faq1-header"
+          >
+            <Typography className={classes.heading}>運用サービスの実績を教えてください</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              メルセデス・ベンツ日本様にてSAPと倉庫管理システムの運用を請け負っています。詳細についてはお問い合わせページより、お問い合わせください。
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="faq2-content"
+              id="faq2-header"
+          >
+            <Typography className={classes.heading}>どのような開発を行っていますか</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              主に業務システムで、会計も含めた全社システムの開発も手がけております。物流業関係、工事業関係、製造業関係、ファイナンス業関係、で大小様々なシステムを多様なプラットフォームで開発しております。ECサイトの構築やHPの構築を始め、最近ではCRMシステムやビッグデータシステムにも注力しております。詳細についてはお問い合わせページより、お問い合わせください。
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="faq3-content"
+              id="faq3-header"
+          >
+            <Typography className={classes.heading}>RFGenの導入実績を教えてください</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              直近ではスウォッチグループジャパン様に導入し、費用・導入スピード・品質ともに好評をいただいております。詳細についてはお問い合わせページより、お問い合わせください。
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
       </div>
     </>
   )

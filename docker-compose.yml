@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/usr/src/app # ローカルとコンテナ内の同期
+      - ./node_modules # node_modulesのマウント防止
     ports:
       - "3000:3000"
     tty: true

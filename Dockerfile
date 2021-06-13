@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:14-alpine
 # コンテナ内で作業するディレクトリを指定
 WORKDIR /usr/src/app
 # package.jsonとyarn.lockを/usr/src/appにコピー
