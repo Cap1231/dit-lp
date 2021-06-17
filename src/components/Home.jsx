@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Home.scss'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -44,6 +44,9 @@ const ServiceItem = ({title, children, icon}) => {
 const Home = () => {
   const isPC = useMediaQuery('(min-width:768px)')
   const classes = useStyles()
+  const [faqItem1Expand, setFaqItem1Expand] = useState(true)
+  const [faqItem2Expand, setFaqItem2Expand] = useState(true)
+  const [faqItem3Expand, setFaqItem3Expand] = useState(true)
 
   return (
     <>
@@ -100,7 +103,7 @@ const Home = () => {
 
       <div className="faq">
         <Container maxWidth="md">
-          <Accordion className="item">
+          <Accordion className="item" expanded={faqItem1Expand} onChange={()=> setFaqItem1Expand(!faqItem1Expand)}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="faq1-content"
@@ -115,7 +118,7 @@ const Home = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion className="item">
+          <Accordion className="item" expanded={faqItem2Expand} onChange={()=> setFaqItem2Expand(!faqItem2Expand)}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="faq2-content"
@@ -130,7 +133,7 @@ const Home = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion className="item">
+          <Accordion className="item" expanded={faqItem3Expand} onChange={()=> setFaqItem3Expand(!faqItem3Expand)}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="faq3-content"

@@ -1,9 +1,17 @@
+.appbar {
+  box-shadow: none !important;
+}
+
 .navbar {
   background-color: #fff;
   color: #252525;
 
   &-brand {
     margin-right: auto;
+    a {
+      color: #252525;
+      text-decoration: none;
+    }
   }
 
   .nav-item {
@@ -19,4 +27,10 @@
 }
 .sidebar {
   width: 45vw;
+  .item {
+    a {
+      color: #252525;
+      text-decoration: none;
+    }
+  }
 }

@@ -8,9 +8,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import './Header.scss'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Drawer from '@material-ui/core/Drawer'
-import List from '@material-ui/core/List';
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
 import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const Header = () => {
@@ -34,20 +34,30 @@ const Header = () => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItem href="/">
-          <ListItemText primary="会社概要"/>
+        <ListItem className='item'>
+          <ListItemText>
+            <Link to="/overview" className="nav-link">会社概要</Link>
+          </ListItemText>
         </ListItem>
-        <ListItem href="/">
-          <ListItemText primary="企業理念"/>
+        <ListItem className='item'>
+          <ListItemText>
+            <Link to="/mission" className="nav-link">企業理念</Link>
+          </ListItemText>
         </ListItem>
-        <ListItem href="/">
-          <ListItemText primary="サービス/製品一覧"/>
+        <ListItem className='item'>
+          <ListItemText>
+            <Link to="/" className="nav-link">サービス/製品一覧</Link>
+          </ListItemText>
         </ListItem>
-        <ListItem href="/">
-          <ListItemText primary="採用情報"/>
+        <ListItem className='item'>
+          <ListItemText>
+            <Link to="/" className="nav-link">採用情報</Link>
+          </ListItemText>
         </ListItem>
-        <ListItem href="/">
-          <ListItemText primary="お問い合わせ"/>
+        <ListItem className='item'>
+          <ListItemText>
+            <Link to="/" className="nav-link">お問い合わせ</Link>
+          </ListItemText>
         </ListItem>
       </List>
       <Divider />
@@ -55,16 +65,16 @@ const Header = () => {
   )
 
   return (
-    <div>
-      <AppBar position="static">
+    <div className='header'>
+      <AppBar position="static" className='appbar'>
         <Toolbar className="navbar">
           <h1 className="navbar-brand">
-            Develop IT
+            <Link to="/" >Develop IT</Link>
           </h1>
           { isPC ? (
             <Typography variant="h6" className="nav-item">
-              <Link to="/" className="nav-link">会社概要</Link>
-              <Link to="/" className="nav-link">企業理念</Link>
+              <Link to="/overview" className="nav-link">会社概要</Link>
+              <Link to="/mission" className="nav-link">企業理念</Link>
               <Link to="/" className="nav-link">サービス/製品一覧</Link>
               <Link to="/" className="nav-link">採用情報</Link>
               <Link to="/" className="nav-link">お問い合わせ</Link>
