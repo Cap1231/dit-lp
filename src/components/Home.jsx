@@ -99,48 +99,53 @@ const Home = () => {
       </div>
 
       <div className="faq">
-        <Accordion>
-          <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="faq1-content"
-              id="faq1-header"
-          >
-            <Typography className={classes.heading}>運用サービスの実績を教えてください</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              メルセデス・ベンツ日本様にてSAPと倉庫管理システムの運用を請け負っています。詳細についてはお問い合わせページより、お問い合わせください。
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="faq2-content"
-              id="faq2-header"
-          >
-            <Typography className={classes.heading}>どのような開発を行っていますか</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              主に業務システムで、会計も含めた全社システムの開発も手がけております。物流業関係、工事業関係、製造業関係、ファイナンス業関係、で大小様々なシステムを多様なプラットフォームで開発しております。ECサイトの構築やHPの構築を始め、最近ではCRMシステムやビッグデータシステムにも注力しております。詳細についてはお問い合わせページより、お問い合わせください。
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="faq3-content"
-              id="faq3-header"
-          >
-            <Typography className={classes.heading}>RFGenの導入実績を教えてください</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              直近ではスウォッチグループジャパン様に導入し、費用・導入スピード・品質ともに好評をいただいております。詳細についてはお問い合わせページより、お問い合わせください。
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+        <Container maxWidth="md">
+          <Accordion className="item">
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="faq1-content"
+                id="faq1-header"
+                className="title"
+            >
+              <Typography className={classes.heading}>運用サービスの実績を教えてください</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="body">
+              <Typography>
+                メルセデス・ベンツ日本様にてSAPと倉庫管理システムの運用を請け負っています。詳細についてはお問い合わせページより、お問い合わせください。
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="item">
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="faq2-content"
+                id="faq2-header"
+                className="title"
+            >
+              <Typography className={classes.heading}>どのような開発を行っていますか</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="body">
+              <Typography>
+                主に業務システムで、会計も含めた全社システムの開発も手がけております。物流業関係、工事業関係、製造業関係、ファイナンス業関係、で大小様々なシステムを多様なプラットフォームで開発しております。ECサイトの構築やHPの構築を始め、最近ではCRMシステムやビッグデータシステムにも注力しております。詳細についてはお問い合わせページより、お問い合わせください。
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="item">
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="faq3-content"
+                id="faq3-header"
+                className="title"
+            >
+              <Typography className={classes.heading}>RFGenの導入実績を教えてください</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="body">
+              <Typography>
+                直近ではスウォッチグループジャパン様に導入し、費用・導入スピード・品質ともに好評をいただいております。詳細についてはお問い合わせページより、お問い合わせください。
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        </Container>
       </div>
     </>
   )

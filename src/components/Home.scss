@@ -138,3 +138,28 @@ $breakpoints: (
     }
   }
 }
+
+.faq {
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  .item {
+    //border-radius: 4px;
+    margin: 0 !important;
+    //padding-bottom: 32px;
+
+    //&::before {
+    //  background: none;
+    //}
+    .title {
+      p { font-weight: bold; }
+    }
+    .body {
+      padding-bottom: 48px;
+    }
+  }
+
+  .item + .item {
+    margin-top: 8px;
+  }
+}

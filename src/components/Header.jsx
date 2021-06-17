@@ -38,10 +38,10 @@ const Header = () => {
           <ListItemText primary="会社概要"/>
         </ListItem>
         <ListItem href="/">
-          <ListItemText primary="サービス/製品一覧"/>
+          <ListItemText primary="企業理念"/>
         </ListItem>
         <ListItem href="/">
-          <ListItemText primary="FAQ"/>
+          <ListItemText primary="サービス/製品一覧"/>
         </ListItem>
         <ListItem href="/">
           <ListItemText primary="採用情報"/>
@@ -64,8 +64,8 @@ const Header = () => {
           { isPC ? (
             <Typography variant="h6" className="nav-item">
               <Link to="/" className="nav-link">会社概要</Link>
+              <Link to="/" className="nav-link">企業理念</Link>
               <Link to="/" className="nav-link">サービス/製品一覧</Link>
-              <Link to="/" className="nav-link">FAQ</Link>
               <Link to="/" className="nav-link">採用情報</Link>
               <Link to="/" className="nav-link">お問い合わせ</Link>
             </Typography>
