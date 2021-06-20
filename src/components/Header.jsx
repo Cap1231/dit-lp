@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import './Header.scss'
@@ -12,9 +11,11 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import Divider from '@material-ui/core/Divider'
 import ListItemText from '@material-ui/core/ListItemText'
+import { useLocation } from 'react-router-dom'
 
 const Header = () => {
   const isPC = useMediaQuery('(min-width:768px)')
+  const location = useLocation()
   const [isSideBarOpen, SetIsSideBarOpen] = useState(false)
   const navItems = [
     {name: '会社概要', to: '/overview'},
@@ -53,6 +54,12 @@ const Header = () => {
     </div>
   )
 
+  // nav-linkに下線をつける
+  const navLinkClass = (linkTo) => {
+    const active = linkTo === location.pathname && 'active'
+    return ('nav-link ' + active)
+  }
+
   return (
     <div className='header'>
       <AppBar position="static" className='appbar'>
@@ -61,11 +68,11 @@ const Header = () => {
             <Link to="/" >Develop IT</Link>
           </h1>
           { isPC ? (
-            <Typography variant="h6" className="nav-item">
+            <div className="nav-item">
               {navItems.map((item, index) => (
-                <Link to={item.to} className="nav-link" key={index}>{item.name}</Link>
+                <Link to={item.to} className={navLinkClass(item.to)} key={index}>{item.name}</Link>
               ))}
-            </Typography>
+            </div>
           ) : (
             <React.Fragment key='right'>
               <IconButton onClick={toggleDrawer(true)}>
