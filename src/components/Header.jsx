@@ -16,6 +16,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 const Header = () => {
   const isPC = useMediaQuery('(min-width:768px)')
   const [isSideBarOpen, SetIsSideBarOpen] = useState(false)
+  const navItems = [
+    {name: '会社概要', to: '/overview'},
+    {name: '企業理念', to: '/mission'},
+    // {name: 'サービス/製品一覧', to: '/'},
+    {name: '採用情報', to: '/recruitment'},
+    {name: 'お問い合わせ', to: '/'},
+  ]
 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -34,31 +41,13 @@ const Header = () => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItem className='item'>
-          <ListItemText>
-            <Link to="/overview" className="nav-link">会社概要</Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem className='item'>
-          <ListItemText>
-            <Link to="/mission" className="nav-link">企業理念</Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem className='item'>
-          <ListItemText>
-            <Link to="/" className="nav-link">サービス/製品一覧</Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem className='item'>
-          <ListItemText>
-            <Link to="/" className="nav-link">採用情報</Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem className='item'>
-          <ListItemText>
-            <Link to="/" className="nav-link">お問い合わせ</Link>
-          </ListItemText>
-        </ListItem>
+        {navItems.map((item, index) => (
+          <ListItem className='item' key={index}>
+            <ListItemText>
+              <Link to={item.to} className="nav-link">{item.name}</Link>
+            </ListItemText>
+          </ListItem>
+        ))}
       </List>
       <Divider />
     </div>
@@ -73,11 +62,9 @@ const Header = () => {
           </h1>
           { isPC ? (
             <Typography variant="h6" className="nav-item">
-              <Link to="/overview" className="nav-link">会社概要</Link>
-              <Link to="/mission" className="nav-link">企業理念</Link>
-              <Link to="/" className="nav-link">サービス/製品一覧</Link>
-              <Link to="/" className="nav-link">採用情報</Link>
-              <Link to="/" className="nav-link">お問い合わせ</Link>
+              {navItems.map((item) => (
+                <Link to={item.to} className="nav-link">{item.name}</Link>
+              ))}
             </Typography>
           ) : (
             <React.Fragment key='right'>
