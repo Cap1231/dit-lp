@@ -1,0 +1,25 @@
+.contact {
+  padding-top: 36px;
+  padding-bottom: 108px;
+
+  .content + .content {
+    margin-top: 80px;
+  }
+
+  .list-item-head {
+    align-items: center;
+    width: 100px;
+    margin-right: 16px;
+    > * + * {
+      margin-left: 8px;
+    }
+  }
+
+  .list-item-body {
+    a {
+      color: #58A6F2;
+      //color: #252525;
+      //text-decoration: none;
+    }
+  }
+}

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className='item'>
-        <Link to="./privacy-policy" >プライバシーポリシー</Link>
+        <Link to="./privacy-policy">プライバシーポリシー</Link>
       </div>
       <div className='copyright'>
         copyright©2007-2021 Develop IT Co.,Ltd. all rights reserved.<br/>

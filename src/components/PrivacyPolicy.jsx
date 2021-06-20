@@ -1,18 +1,12 @@
 import React from "react"
 import './PrivacyPolicy.scss'
-import Grid from "@material-ui/core/Grid";
-import List from "@material-ui/core/List";
+import Grid from "@material-ui/core/Grid"
+import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 import BlurOnIcon from "@material-ui/icons/BlurOn"
-import TableContainer from "@material-ui/core/TableContainer";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableRow from "@material-ui/core/TableRow";
-import TableCell from "@material-ui/core/TableCell";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container"
 
 const PrivacyPolicy = () => {
   const policies1 = [
@@ -59,8 +53,8 @@ const PrivacyPolicy = () => {
         <div>当社では、次のような場合に必要な範囲で個人情報を収集することがあります。</div>
         <Grid item xs={12} md={10}>
           <List dense={false}>
-            {policies1.map(policy => (
-              <ListItem>
+            {policies1.map((policy, index) => (
+              <ListItem key={index}>
                 <ListItemIcon>
                   <BlurOnIcon style={{ color: '#58A6F2'}}/>
                 </ListItemIcon>
@@ -78,8 +72,8 @@ const PrivacyPolicy = () => {
         <div>当社は、お客様から収集した個人情報を次の目的で利用いたします。</div>
         <Grid item xs={12} md={10}>
           <List dense={false}>
-            {policies2.map(policy => (
-              <ListItem>
+            {policies2.map((policy, index) => (
+              <ListItem key={index}>
                 <ListItemIcon>
                   <BlurOnIcon style={{ color: '#58A6F2'}}/>
                 </ListItemIcon>
@@ -97,8 +91,8 @@ const PrivacyPolicy = () => {
         <div>当社では、お客様より取得した個人情報を第三者に開示または提供することはありません。 ただし、次の場合は除きます。</div>
         <Grid item xs={12} md={10}>
           <List dense={false}>
-            {policies3.map(policy => (
-              <ListItem>
+            {policies3.map((policy, index) => (
+              <ListItem key={index}>
                 <ListItemIcon>
                   <BlurOnIcon style={{ color: '#58A6F2'}}/>
                 </ListItemIcon>
@@ -143,7 +137,7 @@ const PrivacyPolicy = () => {
         <Grid item xs={12} md={10}>
           <List dense={false}>
             {policies4.map((policy, index) => (
-              <ListItem alignItems="flex-start">
+              <ListItem alignItems="flex-start" key={index}>
                 <ListItemIcon className="list-item-index">
                   ({index})
                 </ListItemIcon>
@@ -161,7 +155,7 @@ const PrivacyPolicy = () => {
         <Grid item xs={12} md={10}>
           <List dense={false}>
             {policies5.map((policy, index) => (
-              <ListItem alignItems="flex-start">
+              <ListItem alignItems="flex-start" key={index}>
                 <ListItemIcon className="list-item-index">
                   ({index})
                 </ListItemIcon>

@@ -127,6 +127,7 @@ $breakpoints: (
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
+    width: 100%;
 
     > * + * {
       margin-left: 48px;
@@ -156,13 +157,8 @@ $breakpoints: (
   margin-bottom: 24px;
 
   .item {
-    //border-radius: 4px;
     margin: 0 !important;
-    //padding-bottom: 32px;
 
-    //&::before {
-    //  background: none;
-    //}
     .title {
       p { font-weight: bold; }
     }

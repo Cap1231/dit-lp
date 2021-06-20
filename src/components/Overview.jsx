@@ -4,19 +4,13 @@ import './Overview.scss'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
-import FolderIcon from '@material-ui/icons/Folder'
-import BlurOnIcon from '@material-ui/icons/BlurOn';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+import BlurOnIcon from '@material-ui/icons/BlurOn'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableContainer from '@material-ui/core/TableContainer'
+import TableRow from '@material-ui/core/TableRow'
 
 
 const Mission = () => {
@@ -98,8 +92,8 @@ const Mission = () => {
         <h2>沿革</h2>
         <Grid item xs={12} md={10}>
           <List dense={false}>
-              {histories.map(history => (
-                <ListItem>
+              {histories.map((history, index) => (
+                <ListItem key={index}>
                   <ListItemIcon>
                     <BlurOnIcon style={{ color: '#58A6F2'}}/>
                   </ListItemIcon>
