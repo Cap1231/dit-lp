@@ -55,15 +55,15 @@ const Home = () => {
       </div>
 
       <Container className='service'>
-        <ServiceItem title="SAPシステム運用保守" icon={<PeopleOutlineIcon />} classes={classes}>
+        <ServiceItem title="SAPシステム運用保守" icon={<PeopleOutlineIcon style={{ color: '#58A6F2'}}/>} classes={classes}>
           SAPシステムの運用の効率をもっとあげませんか？<br/><br/>
           SAPシステム運用の効率をあげたいと思っている方、SAPのデータを毎日自動でパソコンにダウンロードしたい方、もっとプロアクティブに異常を発見したい方、これがSAPの限界？とあきらめている方、当社にご相談くだされば、必ず貴方を非効率な運用業務から解放する解決策をご提案致します。
         </ServiceItem>
-        <ServiceItem title="MS-Accessシステム開発" icon={<CodeIcon />} classes={classes}>
+        <ServiceItem title="MS-Accessシステム開発" icon={<CodeIcon style={{ color: '#58A6F2'}}/>} classes={classes}>
           効率の悪いExcelの業務をAccessに切り替えませんか？<br/><br/>
           何度も同じデータを入力している、毎月の請求処理、支払処理、その確認作業に膨大な時間を費やしている、データーベースを活用してコンピュータをもっと経営に役立てたい、雑務から従業員を開放しもっと生産的な仕事をさせたい、とお考えの御社は、当社にご相談ください。
         </ServiceItem>
-        <ServiceItem title="RF-Gen ソリューション" icon={<AllInclusiveIcon />} classes={classes}>
+        <ServiceItem title="RF-Gen ソリューション" icon={<AllInclusiveIcon style={{ color: '#58A6F2'}}/>} classes={classes}>
           ハンディターミナルを活用した倉庫システムの決定版！<br/>
           SAP他様々なホストシステム・DataBaseシステムとリアルタイム連携可能。<br/>
           標準テンプレートもあり、安価で短期間で導入・稼働ができます。<br/>

@@ -1,0 +1,24 @@
+.privacy-policy {
+  padding-top: 36px;
+  padding-bottom: 108px;
+
+  .content + .content {
+    margin-top: 80px;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.list-item-index {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.list-item-text {
+  margin-top: 8px !important;
+  font-size: 0.875rem !important;
+  > * {
+    font-size: inherit !important;
+  }
+}

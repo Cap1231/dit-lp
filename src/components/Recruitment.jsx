@@ -1,22 +1,11 @@
 import React from "react"
 import Container from '@material-ui/core/Container'
 import './Recruitment.scss'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import TextField from '@material-ui/core/TextField'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
-import FolderIcon from '@material-ui/icons/Folder'
-import BlurOnIcon from '@material-ui/icons/BlurOn';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 
 
 const Recruitment = () => {
@@ -53,7 +42,7 @@ const Recruitment = () => {
       </div>
 
       <div className='content'>
-        <h2>採用条件（中途採用）</h2>
+        <h3>採用条件（中途採用）</h3>
         <TableContainer className='overview-table-container'>
           <Table>
             <TableBody>
@@ -73,7 +62,7 @@ const Recruitment = () => {
       </div>
 
       <div className='content'>
-        <h2>待遇・勤務地</h2>
+        <h3>待遇・勤務地</h3>
         <TableContainer className='overview-table-container'>
           <Table>
             <TableBody>

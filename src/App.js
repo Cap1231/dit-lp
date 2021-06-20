@@ -6,9 +6,10 @@ import { makeStyles } from '@material-ui/core'
 import Header from './components/Header'
 import Footer from "./components/Footer"
 
-import Overview from "./components/Overview";
+import Overview from "./components/Overview"
 import Mission from './components/Mission'
-import Recruitment from "./components/Recruitment";
+import Recruitment from "./components/Recruitment"
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const useStyles = makeStyles({
   main: {
@@ -32,6 +33,7 @@ function App() {
         <Route exact path="/overview" component={Overview} />
         <Route exact path="/mission" component={Mission} />
         <Route exact path="/recruitment" component={Recruitment} />
+        <Route exact path="/privacy-policy" component={PrivacyPolicy} />
       </div>
 
       {/* Footer */}
