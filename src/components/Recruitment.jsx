@@ -43,12 +43,12 @@ const Recruitment = () => {
 
       <div className='content'>
         <h3>採用条件（中途採用）</h3>
-        <TableContainer className='overview-table-container'>
+        <TableContainer className='recruitment-table-container'>
           <Table>
             <TableBody>
               {requirements.map((row) => (
                 <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row" className='name'>
                     {row.name}
                   </TableCell>
                   <TableCell align="left">
@@ -63,12 +63,12 @@ const Recruitment = () => {
 
       <div className='content'>
         <h3>待遇・勤務地</h3>
-        <TableContainer className='overview-table-container'>
+        <TableContainer className='recruitment-table-container'>
           <Table>
             <TableBody>
               {workingConditions.map((row) => (
                 <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row" className='name'>
                     {row.name}
                   </TableCell>
                   <TableCell align="left">

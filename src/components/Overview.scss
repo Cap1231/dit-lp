@@ -27,5 +27,7 @@
 }
 
 .overview-table-container {
-  //max-width: 80%;
+  .name {
+    white-space: nowrap;
+  }
 }

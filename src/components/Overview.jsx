@@ -12,6 +12,44 @@ import TableCell from '@material-ui/core/TableCell'
 import TableContainer from '@material-ui/core/TableContainer'
 import TableRow from '@material-ui/core/TableRow'
 
+import { makeStyles } from '@material-ui/core/styles'
+import Timeline from '@material-ui/lab/Timeline'
+import TimelineItem from '@material-ui/lab/TimelineItem'
+import TimelineSeparator from '@material-ui/lab/TimelineSeparator'
+import TimelineConnector from '@material-ui/lab/TimelineConnector'
+import TimelineContent from '@material-ui/lab/TimelineContent'
+import TimelineDot from '@material-ui/lab/TimelineDot'
+import Typography from '@material-ui/core/Typography'
+import useMediaQuery from "@material-ui/core/useMediaQuery"
+
+import Icon from '../img/home-bg-01.jpg'
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    padding: '6px 16px',
+  },
+  secondaryTail: {
+    backgroundColor: theme.palette.secondary.main,
+  },
+  timeLine: {
+    padding: 0
+  },
+  timeLineIcon: {
+    backgroundColor: 'transparent',
+    boxShadow: 'none'
+  },
+  timeLineConnector: {
+    background: '#CCDFFB',
+  },
+  timeLineItem: {
+    '&::before': {
+      display: 'none'
+    }
+  },
+  timeLineDate: {
+    padding: '8px 0 10px',
+  }
+}))
 
 const Mission = () => {
   const histories = [
@@ -37,8 +75,12 @@ const Mission = () => {
     {name: '取引先銀行', value: '岡崎信用金庫　豊橋支店'},
   ]
 
+  const classes = useStyles()
+  const isPC = useMediaQuery('(min-width:768px)')
+
   return (
     <Container maxWidth="md" className="overview">
+      <img src={Icon}  alt="アイコン" />
       <div className='content'>
         <h2>ご挨拶</h2>
         <div>
@@ -90,8 +132,9 @@ const Mission = () => {
       </div>
       <div className='content history'>
         <h2>沿革</h2>
-        <Grid item xs={12} md={10}>
-          <List dense={false}>
+        {isPC ? (
+          <Grid item xs={12} md={10}>
+            <List dense={false}>
               {histories.map((history, index) => (
                 <ListItem key={index}>
                   <ListItemIcon>
@@ -103,8 +146,28 @@ const Mission = () => {
                   </div>
                 </ListItem>
               ))}
-          </List>
-        </Grid>
+            </List>
+          </Grid>
+        ):(
+          <Timeline align="left" className={classes.timeLine}>
+            {histories.map((history, index) => (
+              <TimelineItem className={classes.timeLineItem}>
+                <TimelineSeparator>
+                  <TimelineDot className={classes.timeLineIcon}>
+                    <BlurOnIcon style={{ color: '#58A6F2'}}/>
+                  </TimelineDot>
+                  <TimelineConnector className={classes.timeLineConnector}/>
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Typography variant="body2" color="textSecondary" className={classes.timeLineDate}>
+                    {history.date}
+                  </Typography>
+                  <Typography >{history.text}</Typography>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        )}
       </div>
       <div className='content'>
         <h2>概要</h2>
@@ -113,7 +176,7 @@ const Mission = () => {
             <TableBody>
               {companyTableRows.map((row) => (
                 <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row" className='name'>
                     {row.name}
                   </TableCell>
                   <TableCell align="left">
