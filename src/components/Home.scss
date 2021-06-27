@@ -171,3 +171,13 @@ $breakpoints: (
     margin-top: 8px;
   }
 }
+
+// 各ページトップ
+.top-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  @include mq() {
+    height: 300px !important;
+  }
+}

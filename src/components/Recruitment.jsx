@@ -6,7 +6,7 @@ import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
 import TableContainer from '@material-ui/core/TableContainer'
 import TableRow from '@material-ui/core/TableRow'
-
+import TopImage from '../img/recruitment-top.jpg'
 
 const Recruitment = () => {
   const requirements = [
@@ -31,7 +31,9 @@ const Recruitment = () => {
   ]
 
   return (
-    <Container maxWidth="md" className="recruitment">
+    <>
+      <img src={TopImage} alt='recruitment' className='top-image' />
+      <Container maxWidth="md" className="recruitment">
       <div className='content'>
         <h2>採用情報</h2>
         <div>
@@ -81,6 +83,7 @@ const Recruitment = () => {
         </TableContainer>
       </div>
     </Container>
+    </>
   )
 }
 

@@ -22,7 +22,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot'
 import Typography from '@material-ui/core/Typography'
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 
-import Icon from '../img/home-bg-01.jpg'
+import TopImage from '../img/overview-top.jpg'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -79,116 +79,118 @@ const Mission = () => {
   const isPC = useMediaQuery('(min-width:768px)')
 
   return (
-    <Container maxWidth="md" className="overview">
-      <img src={Icon}  alt="アイコン" />
-      <div className='content'>
-        <h2>ご挨拶</h2>
-        <div>
-          <p>
-            ここ数年、我々の業界の状況は大きく変わってきました。国内では業界全体が成長し続けた時代が終わり、優秀なエンジニアが多く集まる、インドや中国をはじめとするアジア諸国、世界市場を舞台にした競争が激しくなっています。
-          </p>
+    <>
+      <img src={TopImage} alt='overview' className='top-image'/>
+      <Container maxWidth="md" className="overview">
+        <div className='content'>
+          <h2>ご挨拶</h2>
+          <div>
+            <p>
+              ここ数年、我々の業界の状況は大きく変わってきました。国内では業界全体が成長し続けた時代が終わり、優秀なエンジニアが多く集まる、インドや中国をはじめとするアジア諸国、世界市場を舞台にした競争が激しくなっています。
+            </p>
 
-          <p>
-            ですが私たちはこの状況をチャンスだと考えています。
-          </p>
+            <p>
+              ですが私たちはこの状況をチャンスだと考えています。
+            </p>
 
-          <p>
-            我々の業界も下請け、孫請けは当たり前の世界です。中小零細企業が今までと同じように、上流から流れてくる仕事だけを頼りにしていてはこれからの競争には勝てません。
-          </p>
+            <p>
+              我々の業界も下請け、孫請けは当たり前の世界です。中小零細企業が今までと同じように、上流から流れてくる仕事だけを頼りにしていてはこれからの競争には勝てません。
+            </p>
 
-          <p>
-            これからは、企業規模に関係なく、高品質で高付加価値のシステムやサービスを、エンドユーザーに直接提供できる企業だけが生き残ることができると考えています。
-          </p>
+            <p>
+              これからは、企業規模に関係なく、高品質で高付加価値のシステムやサービスを、エンドユーザーに直接提供できる企業だけが生き残ることができると考えています。
+            </p>
 
-          <p>
-            私たちはそれを目指し、成長していきたいと思っています。
-          </p>
+            <p>
+              私たちはそれを目指し、成長していきたいと思っています。
+            </p>
 
-          <p>
-            そして、その実現にもっとも大切なのは人だと考えています。技術や知識の偏重になりがちなこの業界ですが、お客様のニーズをシステムやサービスに組み込み、形にするのは我々、人の仕事です。
-          </p>
+            <p>
+              そして、その実現にもっとも大切なのは人だと考えています。技術や知識の偏重になりがちなこの業界ですが、お客様のニーズをシステムやサービスに組み込み、形にするのは我々、人の仕事です。
+            </p>
 
-          <p>
-            お客様からの情報を正しく理解し、ニーズにあった、より品質の高いシステム・サービスを提供できるかどうかは、技術や知識だけでなく、それに携わる人のモチベーションや、誠実さ、責任感も重要になってくると考えています。
-          </p>
+            <p>
+              お客様からの情報を正しく理解し、ニーズにあった、より品質の高いシステム・サービスを提供できるかどうかは、技術や知識だけでなく、それに携わる人のモチベーションや、誠実さ、責任感も重要になってくると考えています。
+            </p>
 
-          <p>
-            お客様から求められる力・価値でもっとも重要なひとつはこうした人間力だと思っています。
-          </p>
+            <p>
+              お客様から求められる力・価値でもっとも重要なひとつはこうした人間力だと思っています。
+            </p>
 
-          <p>
-            デベロップアイティは、そんな技術力だけでなく人間力も備えた人が集まり、高品質で高付加価値のシステム、サービスを提供し続け、お客様のニーズに迅速かつ的確にお応えしてまいりたいと思っています。
-          </p>
+            <p>
+              デベロップアイティは、そんな技術力だけでなく人間力も備えた人が集まり、高品質で高付加価値のシステム、サービスを提供し続け、お客様のニーズに迅速かつ的確にお応えしてまいりたいと思っています。
+            </p>
 
-          <p>
-            これからのデベロップアイティをどうぞよろしくお願い申し上げます。
-          </p>
+            <p>
+              これからのデベロップアイティをどうぞよろしくお願い申し上げます。
+            </p>
 
-          <p>
-            株式会社デベロップアイティ<br/>
-            代表取締役　南秀一
-          </p>
+            <p>
+              株式会社デベロップアイティ<br/>
+              代表取締役　南秀一
+            </p>
+          </div>
         </div>
-      </div>
-      <div className='content history'>
-        <h2>沿革</h2>
-        {isPC ? (
-          <Grid item xs={12} md={10}>
-            <List dense={false}>
+        <div className='content history'>
+          <h2>沿革</h2>
+          {isPC ? (
+            <Grid item xs={12} md={10}>
+              <List dense={false}>
+                {histories.map((history, index) => (
+                  <ListItem key={index}>
+                    <ListItemIcon>
+                      <BlurOnIcon style={{ color: '#58A6F2'}}/>
+                    </ListItemIcon>
+                    <div className='item-text-content'>
+                      <p className='date'>{history.date}</p>
+                      <p className='text'>{history.text}</p>
+                    </div>
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+          ):(
+            <Timeline align="left" className={classes.timeLine}>
               {histories.map((history, index) => (
-                <ListItem key={index}>
-                  <ListItemIcon>
-                    <BlurOnIcon style={{ color: '#58A6F2'}}/>
-                  </ListItemIcon>
-                  <div className='item-text-content'>
-                    <p className='date'>{history.date}</p>
-                    <p className='text'>{history.text}</p>
-                  </div>
-                </ListItem>
+                <TimelineItem className={classes.timeLineItem}>
+                  <TimelineSeparator>
+                    <TimelineDot className={classes.timeLineIcon}>
+                      <BlurOnIcon style={{ color: '#58A6F2'}}/>
+                    </TimelineDot>
+                    <TimelineConnector className={classes.timeLineConnector}/>
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Typography variant="body2" color="textSecondary" className={classes.timeLineDate}>
+                      {history.date}
+                    </Typography>
+                    <Typography >{history.text}</Typography>
+                  </TimelineContent>
+                </TimelineItem>
               ))}
-            </List>
-          </Grid>
-        ):(
-          <Timeline align="left" className={classes.timeLine}>
-            {histories.map((history, index) => (
-              <TimelineItem className={classes.timeLineItem}>
-                <TimelineSeparator>
-                  <TimelineDot className={classes.timeLineIcon}>
-                    <BlurOnIcon style={{ color: '#58A6F2'}}/>
-                  </TimelineDot>
-                  <TimelineConnector className={classes.timeLineConnector}/>
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography variant="body2" color="textSecondary" className={classes.timeLineDate}>
-                    {history.date}
-                  </Typography>
-                  <Typography >{history.text}</Typography>
-                </TimelineContent>
-              </TimelineItem>
-            ))}
-          </Timeline>
-        )}
-      </div>
-      <div className='content'>
-        <h2>概要</h2>
-        <TableContainer className='overview-table-container'>
-          <Table>
-            <TableBody>
-              {companyTableRows.map((row) => (
-                <TableRow key={row.name}>
-                  <TableCell component="th" scope="row" className='name'>
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="left">
-                    <span dangerouslySetInnerHTML={{__html: row.value}}></span>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
-    </Container>
+            </Timeline>
+          )}
+        </div>
+        <div className='content'>
+          <h2>概要</h2>
+          <TableContainer className='overview-table-container'>
+            <Table>
+              <TableBody>
+                {companyTableRows.map((row) => (
+                  <TableRow key={row.name}>
+                    <TableCell component="th" scope="row" className='name'>
+                      {row.name}
+                    </TableCell>
+                    <TableCell align="left">
+                      <span dangerouslySetInnerHTML={{__html: row.value}}></span>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </div>
+      </Container>
+    </>
   )
 }
 
