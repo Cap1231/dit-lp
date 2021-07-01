@@ -11,6 +11,7 @@ import Mission from './components/Mission'
 import Recruitment from "./components/Recruitment"
 import Contact from "./components/Contact"
 import PrivacyPolicy from "./components/PrivacyPolicy"
+import Service from "./components/Service"
 
 const useStyles = makeStyles({
   main: {
@@ -38,6 +39,7 @@ function App() {
           <Route exact path="/recruitment" component={Recruitment} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/privacy-policy" component={PrivacyPolicy} />
+          <Route exact path="/service" component={Service} />
 
           {/* 404 => home に遷移させる */}
           <Route component={Home} />

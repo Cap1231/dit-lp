@@ -3,6 +3,8 @@ import './Footer.scss'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
+  const foundationYear = 2007
 
   return (
     <div className="footer">
@@ -10,7 +12,7 @@ const Footer = () => {
         <Link to="./privacy-policy">プライバシーポリシー</Link>
       </div>
       <div className='copyright'>
-        copyright©2007-2021 Develop IT Co.,Ltd. all rights reserved.<br/>
+        Copyright © {foundationYear} - {currentYear} Develop IT Co.,Ltd. all rights reserved.<br/>
       </div>
     </div>
   )
