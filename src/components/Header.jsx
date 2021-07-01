@@ -20,7 +20,7 @@ const Header = () => {
   const navItems = [
     {name: '会社概要', to: '/overview'},
     {name: '企業理念', to: '/mission'},
-    // {name: 'サービス/製品一覧', to: '/'},
+    {name: 'サービス', to: '/service'},
     {name: '採用情報', to: '/recruitment'},
     {name: 'お問い合わせ', to: '/contact'},
   ]
