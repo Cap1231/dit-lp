@@ -12,6 +12,7 @@ import ListItem from '@material-ui/core/ListItem'
 import Divider from '@material-ui/core/Divider'
 import ListItemText from '@material-ui/core/ListItemText'
 import { useLocation } from 'react-router-dom'
+import {ReactComponent as Logo}from '../img/logo.svg'
 
 const Header = () => {
   const isPC = useMediaQuery('(min-width:768px)')
@@ -65,7 +66,7 @@ const Header = () => {
       <AppBar position="static" className='appbar'>
         <Toolbar className="navbar">
           <h1 className="navbar-brand">
-            <Link to="/" >Develop IT</Link>
+            <Link to="/" ><Logo className={'logo'}/>Develop IT</Link>
           </h1>
           { isPC ? (
             <div className="nav-item">
