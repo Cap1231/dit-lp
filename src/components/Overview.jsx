@@ -22,7 +22,8 @@ import TimelineDot from '@material-ui/lab/TimelineDot'
 import Typography from '@material-ui/core/Typography'
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 
-import TopImage from '../img/overview-top.jpg'
+// import TopImage from '../img/overview-top.jpg'
+import TopImage from '../img/overview-top.svg'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
