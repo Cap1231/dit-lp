@@ -18,10 +18,6 @@ import {ReactComponent as Other}from '../img/other.svg'
 import Link from '@material-ui/core/Link'
 
 const useStyles = makeStyles((theme) => ({
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-  },
   cardIcon: {
     '& > svg': {
       width: '100%',
@@ -30,7 +26,11 @@ const useStyles = makeStyles((theme) => ({
   },
   cardAction: {
     padding: '0 16px 16px'
-  }
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
 }))
 
 const ServiceItem = ({title, children, icon, classes, linkHref}) => {
@@ -74,15 +74,18 @@ const Home = () => {
       </div>
 
       <Container className='service'>
-        <ServiceItem title="Webシステム開発" icon={<Web />} classes={classes} linkHref={"/service#web"}>
-          Ruby on RailsによるWebシステムの開発、クラウドの構築・運用・保守を行っております。
-        </ServiceItem>
-        <ServiceItem title="SAPシステム運用保守" icon={<Sap />} classes={classes} linkHref={"/service#sap"}>
-          最小の工数で最大のサービスを提供致します。
-        </ServiceItem>
-        <ServiceItem title="その他" icon={<Other />} classes={classes} linkHref={"/service#other"}>
-          RPA開発、スマホアプリ開発、AccessやExcelによる業務システムの開発
-        </ServiceItem>
+        <h2 className='service-title'>SERVICE</h2>
+        <div className="service-list">
+          <ServiceItem title="Webシステム開発" icon={<Web />} classes={classes} linkHref={"/service#web"}>
+            Ruby on RailsによるWebシステムの開発、クラウドの構築・運用・保守を行っております。
+          </ServiceItem>
+          <ServiceItem title="SAPシステム運用保守" icon={<Sap />} classes={classes} linkHref={"/service#sap"}>
+            最小の工数で最大のサービスを提供致します。
+          </ServiceItem>
+          <ServiceItem title="その他" icon={<Other />} classes={classes} linkHref={"/service#other"}>
+            RPA開発、スマホアプリ開発、AccessやExcelによる業務システムの開発
+          </ServiceItem>
+        </div>
       </Container>
 
       <div className="accomplishment">
@@ -106,6 +109,7 @@ const Home = () => {
 
       <div className="faq">
         <Container maxWidth="md">
+          <h2 className='faq-title'>FAQ</h2>
           <Accordion className="item" expanded={faqItem1Expand} onChange={()=> setFaqItem1Expand(!faqItem1Expand)}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
