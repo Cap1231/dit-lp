@@ -74,19 +74,14 @@ const Home = () => {
       </div>
 
       <Container className='service'>
-        <ServiceItem title="Rubyウェブ開発" icon={<Web />} classes={classes} linkHref={"/service#web"}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, asperiores enim exercitationem iste
-          pariatur repellat sunt. Beatae dignissimos dolor explicabo itaque, laboriosam magni maxime odit velit?
-          Ipsam, odit, vitae. A!
+        <ServiceItem title="Webシステム開発" icon={<Web />} classes={classes} linkHref={"/service#web"}>
+          Ruby on RailsによるWebシステムの開発、クラウドの構築・運用・保守を行っております。
         </ServiceItem>
         <ServiceItem title="SAPシステム運用保守" icon={<Sap />} classes={classes} linkHref={"/service#sap"}>
-          SAPシステムの運用の効率をもっとあげませんか？<br/><br/>
-          SAPシステム運用の効率をあげたいと思っている方、SAPのデータを毎日自動でパソコンにダウンロードしたい方、もっとプロアクティブに異常を発見したい方、これがSAPの限界？とあきらめている方、当社にご相談くだされば、必ず貴方を非効率な運用業務から解放する解決策をご提案致します。
+          最小の工数で最大のサービスを提供致します。
         </ServiceItem>
         <ServiceItem title="その他" icon={<Other />} classes={classes} linkHref={"/service#other"}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, asperiores enim exercitationem iste
-          pariatur repellat sunt. Beatae dignissimos dolor explicabo itaque, laboriosam magni maxime odit velit?
-          Ipsam, odit, vitae. A!
+          RPA開発、スマホアプリ開発、AccessやExcelによる業務システムの開発
         </ServiceItem>
       </Container>
 

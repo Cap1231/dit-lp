@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   serviceTextSp: {
     width: '100%',
+    marginBottom: '36px'
   },
   serviceImage: {
     width: '30%',
@@ -44,28 +45,29 @@ const Service = () => {
   const isPC = useMediaQuery('(min-width:768px)')
   return (
     <Container maxWidth="md" className={classes.serviceContainer}>
-      <Box display="flex" flexDirection={isPC ? "row" : "column"}  className={classes.serviceItem} id={'web'}>
+      <Box display="flex" alignItems={'center'} flexDirection={isPC ? "row" : "column"}  className={classes.serviceItem} id={'web'}>
         <div className={isPC ? classes.serviceText : classes.serviceTextSp}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quisquam.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cupiditate, doloribus labore officiis praesentium quas similique sint. Consequatur, cumque doloribus itaque laudantium, nulla, perspiciatis quas quidem reprehenderit saepe sapiente sequi!
+          Ruby on Railsを主体に、クラウドサービス（AWSやGCPなど）を使いWebシステムの開発を行っております。
+          Ruby on Railsは生産性と拡張性に優れたプラットフォームで、スタートアップ事業などサービスインのスピードと柔軟な要件吸収が求められる場合などに適しております。<br/>
+          開発はRuby on Railsのコーディング規約に厳格に準拠し、高い保守性と汎用性を担保し、適宜テストプログラムも実装し開発を行い、バグ発生率の極小化を実現しております。<br/>
+          また、DevOps＋アジャイルでの開発により、開発のスピードアップと要件漏れや認識齟齬の極小化も実現しております。
         </div>
         <div className={isPC ? classes.serviceImage : classes.serviceImageSp}>
           <Web/>
         </div>
       </Box>
-      <Box display="flex" flexDirection={isPC ? "row-reverse" : "column"} className={classes.serviceItem} id={'sap'}>
+      <Box display="flex" alignItems={'center'} flexDirection={isPC ? "row-reverse" : "column"} className={classes.serviceItem} id={'sap'}>
         <div className={isPC ? classes.serviceText : classes.serviceTextSp}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quisquam.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cupiditate, doloribus labore officiis praesentium quas similique sint. Consequatur, cumque doloribus itaque laudantium, nulla, perspiciatis quas quidem reprehenderit saepe sapiente sequi!
+          SAPシステムの運用保守チーム（業務側）の工数は肥大化することが多く、そのコストに悩まされているお客様も非常に多いです。
+          弊社では運用ツール・RPAなどを開発・活用しつつ、エンジニアを主体としたチームにて最小の工数で高い品質の運用保守サービスを提供致します。
         </div>
         <div className={isPC ? classes.serviceImage : classes.serviceImageSp}>
           <Sap/>
         </div>
       </Box>
-      <Box display="flex" flexDirection={isPC ? "row" : "column"} className={classes.serviceItem} id={'other'}>
+      <Box display="flex" alignItems={'center'} flexDirection={isPC ? "row" : "column"} className={classes.serviceItem} id={'other'}>
         <div className={isPC ? classes.serviceText : classes.serviceTextSp}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quisquam.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cupiditate, doloribus labore officiis praesentium quas similique sint. Consequatur, cumque doloribus itaque laudantium, nulla, perspiciatis quas quidem reprehenderit saepe sapiente sequi!
+          RPA開発など、事務作業の自動化・効率化が得意です。付加価値の低い業務からスタッフを開放して、より高付加価値な業務に専念できる環境づくりをサポート致します。
         </div>
         <div className={isPC ? classes.serviceImage : classes.serviceImageSp}>
           <Other/>
