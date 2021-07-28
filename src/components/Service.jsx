@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '100px',
     paddingBottom: '250px',
   },
+  serviceTitle: {
+    padding: '0 16px'
+  },
   serviceItem: {
     marginBottom: '48px',
   },
@@ -75,6 +78,7 @@ const Service = () => {
   const isPC = useMediaQuery('(min-width:768px)')
   return (
     <Container maxWidth="md" className={classes.serviceContainer}>
+      <h2 className={classes.serviceTitle}>サービス</h2>
       <Box display="flex" alignItems={'center'} flexDirection={isPC ? "row" : "column"}
            className={`${classes.serviceItem} ${classes.serviceItemFadeRight}`} id={'web'}>
         <div className={isPC ? classes.serviceText : classes.serviceTextSp}>
