@@ -1,8 +1,8 @@
 import React from "react"
 import Container from '@material-ui/core/Container'
 import './Mission.scss'
-// import TopImage from '../img/mission-top.jpg'
-import TopImage from '../img/mission-top.svg'
+import TopImage from '../img/mission-top.jpg'
+// import TopImage from '../img/mission-top.svg'
 
 const Mission = () => {
   return (

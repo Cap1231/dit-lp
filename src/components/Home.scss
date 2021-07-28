@@ -198,13 +198,18 @@ $breakpoints: (
 
 // 各ページトップ
 .top-image {
-  padding: 24px;
+  // JPG使用
+  object-fit: cover;
   width: 100%;
-  height: 360px;
-  object-fit: contain;
-  animation-name: fadeUp;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
+  height: 500px;
+  // SVG使用
+  //padding: 24px;
+  //width: 100%;
+  //height: 360px;
+  //object-fit: contain;
+  //animation-name: fadeUp;
+  //animation-duration: 2s;
+  //animation-iteration-count: 1;
   @include mq() {
     height: 300px !important;
   }
