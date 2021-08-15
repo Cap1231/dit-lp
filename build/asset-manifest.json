@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.67688178.chunk.css",
+    "main.js": "/static/js/main.8ce6c749.chunk.js",
+    "main.js.map": "/static/js/main.8ce6c749.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7541d99b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7541d99b.js.map",
+    "static/js/2.76473968.chunk.js": "/static/js/2.76473968.chunk.js",
+    "static/js/2.76473968.chunk.js.map": "/static/js/2.76473968.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.67688178.chunk.css.map": "/static/css/main.67688178.chunk.css.map",
+    "static/js/2.76473968.chunk.js.LICENSE.txt": "/static/js/2.76473968.chunk.js.LICENSE.txt",
+    "static/media/Overview.scss": "/static/media/home-bg-02.a5a84248.jpg",
+    "static/media/logo.1fee9c61.svg": "/static/media/logo.1fee9c61.svg",
+    "static/media/mission-top.de0ad2d8.svg": "/static/media/mission-top.de0ad2d8.svg",
+    "static/media/other.29b948dc.svg": "/static/media/other.29b948dc.svg",
+    "static/media/overview-top.a08e4dd5.svg": "/static/media/overview-top.a08e4dd5.svg",
+    "static/media/recruitment-top.a704f3a9.svg": "/static/media/recruitment-top.a704f3a9.svg",
+    "static/media/sap.b8acc0e5.svg": "/static/media/sap.b8acc0e5.svg",
+    "static/media/web.65a88248.svg": "/static/media/web.65a88248.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7541d99b.js",
+    "static/js/2.76473968.chunk.js",
+    "static/css/main.67688178.chunk.css",
+    "static/js/main.8ce6c749.chunk.js"
+  ]
+}
