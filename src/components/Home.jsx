@@ -117,7 +117,7 @@ const Home = () => {
                 id="faq1-header"
                 className="title"
             >
-              <Typography className={classes.heading}>運用サービスの実績を教えてください</Typography>
+              <Typography className={classes.heading}>Webシステムの開発の事例を教えて下さい。</Typography>
             </AccordionSummary>
             <AccordionDetails className="body">
               <Typography>
@@ -132,7 +132,7 @@ const Home = () => {
                 id="faq2-header"
                 className="title"
             >
-              <Typography className={classes.heading}>どのような開発を行っていますか</Typography>
+              <Typography className={classes.heading}>SAPシステム運用保守の実績を教えて下さい。</Typography>
             </AccordionSummary>
             <AccordionDetails className="body">
               <Typography>
@@ -147,7 +147,7 @@ const Home = () => {
                 id="faq3-header"
                 className="title"
             >
-              <Typography className={classes.heading}>RFGenの導入実績を教えてください</Typography>
+              <Typography className={classes.heading}>RPAの開発って、SaaSと何が違うのでしょうか？</Typography>
             </AccordionSummary>
             <AccordionDetails className="body">
               <Typography>
