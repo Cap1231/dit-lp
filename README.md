@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Developer IT のホームページ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Version
+node: 12.4.0\
+yarn: 1.22.4
 
 ## Available Scripts
 
