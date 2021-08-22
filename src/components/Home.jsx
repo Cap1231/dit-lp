@@ -33,6 +33,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
+const FaqItem = ({expanded, handleChange, headingClass, title, children}) => (
+  <Accordion className="item" expanded={expanded} onChange={handleChange}>
+    <AccordionSummary
+      expandIcon={<ExpandMoreIcon />}
+      className="title"
+    >
+      <Typography className={headingClass}>{title}</Typography>
+    </AccordionSummary>
+    <AccordionDetails className="body">
+      <Typography>
+        {children}
+      </Typography>
+    </AccordionDetails>
+  </Accordion>
+)
+
 const ServiceItem = ({title, children, icon, classes, linkHref}) => {
   return (
     <Card className='service-item'>
@@ -110,51 +126,37 @@ const Home = () => {
       <div className="faq">
         <Container maxWidth="md">
           <h2 className='faq-title'>FAQ</h2>
-          <Accordion className="item" expanded={faqItem1Expand} onChange={()=> setFaqItem1Expand(!faqItem1Expand)}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="faq1-content"
-                id="faq1-header"
-                className="title"
-            >
-              <Typography className={classes.heading}>Webシステムの開発の事例を教えて下さい。</Typography>
-            </AccordionSummary>
-            <AccordionDetails className="body">
-              <Typography>
-                メルセデス・ベンツ日本様にてSAPと倉庫管理システムの運用を請け負っています。詳細についてはお問い合わせページより、お問い合わせください。
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="item" expanded={faqItem2Expand} onChange={()=> setFaqItem2Expand(!faqItem2Expand)}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="faq2-content"
-                id="faq2-header"
-                className="title"
-            >
-              <Typography className={classes.heading}>SAPシステム運用保守の実績を教えて下さい。</Typography>
-            </AccordionSummary>
-            <AccordionDetails className="body">
-              <Typography>
-                主に業務システムで、会計も含めた全社システムの開発も手がけております。物流業関係、工事業関係、製造業関係、ファイナンス業関係、で大小様々なシステムを多様なプラットフォームで開発しております。ECサイトの構築やHPの構築を始め、最近ではCRMシステムやビッグデータシステムにも注力しております。詳細についてはお問い合わせページより、お問い合わせください。
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className="item" expanded={faqItem3Expand} onChange={()=> setFaqItem3Expand(!faqItem3Expand)}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="faq3-content"
-                id="faq3-header"
-                className="title"
-            >
-              <Typography className={classes.heading}>RPAの開発って、SaaSと何が違うのでしょうか？</Typography>
-            </AccordionSummary>
-            <AccordionDetails className="body">
-              <Typography>
-                直近ではスウォッチグループジャパン様に導入し、費用・導入スピード・品質ともに好評をいただいております。詳細についてはお問い合わせページより、お問い合わせください。
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
+          <FaqItem
+            expanded={faqItem1Expand}
+            handleChange={()=> setFaqItem1Expand(!faqItem1Expand)}
+            headingClass={classes.heading}
+            title={"Webシステムの開発の事例を教えて下さい。"}
+          >
+            自動車整備管理システム、ECシステム、金融商品取引システム、予約サービスシステムなどになり、すべてAWS＋Ruby(on Rails)を中心に
+            構築し、安定した運用保守を実現しております。<br/>
+            また、必要に応じてスマホのアプリの開発も行います。
+          </FaqItem>
+          <FaqItem
+            expanded={faqItem2Expand}
+            handleChange={()=> setFaqItem2Expand(!faqItem2Expand)}
+            headingClass={classes.heading}
+            title={"システム運用保守の実績を教えて下さい。"}
+          >
+            メルセデス・ベンツ日本様でのSAPと倉庫管理システムの運用をはじめ、スウォッチグループジャパン様他、物流業関係、サービス、
+            小売業など幅広い業態にて、運用保守の実績がございます。<br/>
+            詳細はお問い合わせください。
+          </FaqItem>
+          <FaqItem
+            expanded={faqItem3Expand}
+            handleChange={()=> setFaqItem3Expand(!faqItem3Expand)}
+            headingClass={classes.heading}
+            title={"RPAのスクラッチ開発は、SaaSやパッケージ製品のRPAと何が違うのでしょうか？"}
+          >
+            RPAの要件は様々で、Webサービス、Office製品、基幹システムなども含め全プロセスを全自動で自動制御したり、データの判定や加工など
+            を同時に行うなど高度な機能を実現するためにはスクラッチ開発が必要となります。<br/>
+            パッケージの場合、各プロセスをつまみぐいRPAによる 半自動可にとどまる事が多く、パッケージからスクラッチへの移行を行うお客様もいらっしゃいます。<br/>
+            弊社では、より付加価値の高い業務にスタッフのコストを投入したい、とお考えの皆様の課題に日々取り組んでおります
+          </FaqItem>
         </Container>
       </div>
     </>
