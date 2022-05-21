@@ -10,7 +10,7 @@ import Container from "@material-ui/core/Container"
 
 const Contact = () => {
   const contacts = [
-    {name: 'Tel', value: '03-6869-3445'},
+    {name: 'Tel', value: '050-6877-6086'},
     {name: 'Email', value: 'info@developit.jp'},
   ]
   return (
